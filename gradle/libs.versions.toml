@@ -1,0 +1,51 @@
+[versions]
+# SDK versions
+compileSdk = "34"
+faceDetection = "16.1.7"
+minSdk = "24"
+onnxruntimeAndroid = "1.16.3"
+targetSdk = "34"
+
+# Plugins
+agp = "8.2.0" # Android Gradle Plugin version
+kotlin = "1.9.10"
+
+# Libraries
+androidxCore = "1.12.0"
+androidxAppCompat = "1.6.1"
+material = "1.10.0"
+coroutines = "1.7.3"
+mlKit = "16.1.5"
+onnx = "1.15.1"
+
+# Testing
+junit = "4.13.2"
+androidxJunit = "1.1.5"
+espresso = "3.5.1"
+
+[libraries]
+# AndroidX
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
+face-detection-v1617 = { module = "com.google.mlkit:face-detection", version.ref = "faceDetection" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Kotlin Coroutines
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# ML Kit
+google-mlkit-face-detection = { group = "com.google.mlkit", name = "face-detection", version.ref = "mlKit" }
+
+# ONNX Runtime
+onnxruntime-android = { group = "com.microsoft.onnxruntime", name = "onnxruntime-android", version.ref = "onnx" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+onnxruntime-android-v1163 = { module = "com.microsoft.onnxruntime:onnxruntime-android", version.ref = "onnxruntimeAndroid" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
